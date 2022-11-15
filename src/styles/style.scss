@@ -1,0 +1,96 @@
+$black : #14141A;
+$lightBlack : #282834;
+$disable : #77748C;
+$white : #fff;
+$listBg : #21212B;
+$listBorder : #3C3C4E;
+$lightYellow : #33392B;
+$yellow : #FFF389;
+$radius : 15px;
+$padding : 20px;
+
+@font-face {
+  font-family: 'rounded';
+  src: url("../fonts/rounded.otf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'rounded';
+  src: url("../fonts/rounded-bold.otf");
+  font-weight: bold;
+}
+
+body{
+  margin: 0;
+  background: $black;
+  font-family: 'rounded';
+  font-size: 20px;
+
+  .main{
+    display: flex;
+    justify-content: center;
+
+    .main-child{
+      width: 100%;
+      padding: 100px;
+      text-align: center;
+
+      .header{
+        color: $white;
+        margin-bottom: 50px;
+        h3{
+          font-weight: bold;
+          margin-bottom: 0;
+        }
+        .author{
+          font-size: 15px;
+        }
+      }
+
+      .search-input {
+        background-color: $lightBlack;
+        padding: $padding;
+        border: none;
+        outline: none;
+        width: 70%;
+        border-radius: $radius;
+        color: $white;
+        font-size: 20px;
+      }
+
+      .search-input::placeholder{
+        color: $disable;
+      }
+
+      ul{
+        list-style-type: none;
+        margin-top: 80px;
+
+        li{
+          background-color: $listBg;
+          border-radius: $radius;
+          color: $white;
+          padding: $padding;
+          width: 40%;
+          margin: 10px auto;
+          border: 1px solid transparent;
+          transition: 0.5s all;
+        }
+
+        li:hover{
+          border: 1px solid $listBorder;
+          cursor: pointer;
+        }
+
+        .alert {
+          background: $lightYellow;
+          color: $yellow;
+        }
+      }
+    }
+  }
+}
+
+
+
